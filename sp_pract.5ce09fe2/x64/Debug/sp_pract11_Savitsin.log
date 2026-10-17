@@ -1,0 +1,4 @@
+﻿  sp_pract11_Savitsin.cpp
+C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\sp_pract11_Savitsin.cpp(50,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\sp_pract11_Savitsin.cpp(57,12): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  sp_pract11_Savitsin.vcxproj -> C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\x64\Debug\sp_pract11_Savitsin.exe
