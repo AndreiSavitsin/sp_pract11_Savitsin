@@ -1,4 +1,5 @@
 ﻿  sp_pract11_Savitsin.cpp
-C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\sp_pract11_Savitsin.cpp(50,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\sp_pract11_Savitsin.cpp(57,12): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  sp_pract11_Savitsin.vcxproj -> C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\x64\Debug\sp_pract11_Savitsin.exe
+C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\sp_pract11_Savitsin\sp_pract11_Savitsin.cpp(66,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\sp_pract11_Savitsin\sp_pract11_Savitsin.cpp(75,12): warning C4244: инициализация: преобразование "std::streamsize" в "int", возможна потеря данных
+C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\sp_pract11_Savitsin\sp_pract11_Savitsin.cpp(61,1): warning C4717: Obstacle: рекурсия на всех путях выполнения, функция вызовет переполнение стека
+  sp_pract11_Savitsin.vcxproj -> C:\Users\st310-02\Desktop\Савицин ПР-31\sp_pract11_Savitsin\sp_pract11_Savitsin\x64\Debug\sp_pract11_Savitsin.exe
