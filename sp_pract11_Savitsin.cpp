@@ -1,6 +1,7 @@
 ﻿#include <Windows.h>
 #include <iostream>
 #include <fstream>
+#include <random>
 
 struct Robot
 {
@@ -55,6 +56,8 @@ public:
 		id = _id;
 	}
 
+	std::mt19937 Mt;
+
 	int* trials;
 	int trialCount;
 };
@@ -103,7 +106,7 @@ void Recharging(Robot* robot) //Испытание 3. Подзарядка
 {
 	std::cout << "Робот с id: " << robot->GetID() << " начал проходить испытание Подзарядка\n";
 
-	int time = (rand() % 5 + 1) * 1000;
+	int time = (robot->Mt() % 5 + 1) * 1000;
 
 	Sleep(time);
 
@@ -140,11 +143,11 @@ void Marathon(Robot* robot) //Испытание 4. Марафон
 
 DWORD WINAPI RobotThread(LPVOID param)
 {	
-	Robot* robot = static_cast<Robot*>(param);
-
+	Robot* robot = static_cast<Robot*>(param);			
+	
 	for (int i = 0; i < robot->trialCount; i++)
 	{
-		Sleep((rand() % 3 + 1) * 1000);
+		Sleep((robot->Mt() % 3 + 1) * 1000);
 
 		switch (robot->trials[i])
 		{
@@ -227,6 +230,7 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	srand(time(NULL));
 
+	std::random_device rd;
 
 	std::ifstream file("arena.dat", std::ios::binary);
 
@@ -253,12 +257,13 @@ int main()
 				robots[i].SetID(i + 1);
 				robots[i].trials = trials;
 				robots[i].trialCount = trialCount;
+				robots[i].Mt.seed(rd());
 			}
 
 			HANDLE* threads = new HANDLE[count];
 
 			for (int i = 0; i < count; i++)
-			{
+			{				
 				threads[i] = CreateThread(NULL, 0, RobotThread, &robots[i], 0, NULL);
 				if (threads[i] == NULL) return GetLastError();
 			}
